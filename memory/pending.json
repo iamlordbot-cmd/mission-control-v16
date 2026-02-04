@@ -1,0 +1,31 @@
+{
+  "pending_from_boss": [
+    {
+      "id": 1,
+      "item": "Configurer Zapier MCP (accès Gmail, Sheets, etc.)",
+      "requested": "2026-02-04",
+      "status": "waiting"
+    },
+    {
+      "id": 2,
+      "item": "Infos pour sub-agent Mirage (WhatsApp Business)",
+      "requested": "2026-02-04",
+      "status": "waiting",
+      "details": [
+        "Plaquette commerciale PDF (Alma & Iris)",
+        "Liste des unités disponibles + prix",
+        "FAQ questions fréquentes",
+        "Nom/personnalité du bot (ex: Sofia, Karim...)",
+        "Ton souhaité (formel, friendly, mix)",
+        "Règles d'escalade (quand te ping)"
+      ],
+      "architecture": {
+        "type": "Option A - Event-driven avec mémoire",
+        "memoire": "1 fichier par numéro de téléphone (memory/mirage/+XXX.json)",
+        "declencheur": "Zapier MCP",
+        "prerequis": "Zapier MCP connecté"
+      }
+    }
+  ],
+  "reminders": []
+}

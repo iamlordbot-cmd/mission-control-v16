@@ -1,0 +1,10 @@
+{
+  "crons": [
+    {
+      "name": "heartbeat",
+      "schedule": "*/30 * * * *",
+      "status": "active",
+      "source": "repo"
+    }
+  ]
+}
