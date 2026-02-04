@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+/* Allow vertical scroll (especially on iOS) */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  min-height: 100vh;
+  height: auto !important;
+}
+
+#root {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+}
+
+/* 3D canvas must not block touch scroll */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Mobile scroll ergonomics */
+.dashboard-content {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Glassmorphism helpers */
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(255, 255, 255, 0.06) 55%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 20px 60px rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(10px);
+}
+
+.glassLight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.45) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+}
